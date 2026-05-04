@@ -1,15 +1,18 @@
 {
   "functions": {
-    "**/*.php": {
+    "index.php": {
+      "runtime": "vercel-php@0.6.0"
+    },
+    "register.php": {
       "runtime": "vercel-php@0.6.0"
     }
   },
   "routes": [
     { "src": "/glamour/(.*)", "dest": "/glamour/$1" },
     { "src": "/register", "dest": "/register.php" },
-    { "src": "/includ/(.*)", "dest": "/includ/$1" },
     { "src": "/firebase-init.js", "dest": "/firebase-init.js" },
     { "src": "/app.js", "dest": "/app.js" },
+    { "src": "/", "dest": "/index.php" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
