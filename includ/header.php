@@ -28,8 +28,8 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="/">
-    <meta property="twitter:title" content="Animo - What is Glamour">
-    <meta property="twitter:description" content="Join Animo, the innovative ecosystem that rewards you for your daily steps. Explore our features, including affiliate marketing, skill acquisition, and digital real estate.">
+    <meta property="twitter:title" content="Glamour - What is Glamour">
+    <meta property="twitter:description" content="Glamour is a European institution that partners with Africans to showcase your lifestyle, creativity, daily habits and get paid for it.">
     <meta property="twitter:image" content="glamour/golove.png">
 
     <!-- Google Fonts: Poppins -->
@@ -757,11 +757,11 @@
  <!-- Navbar -->
     <nav class="navbar navbar-custom navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand js-global-link" href="/">
-                <img src="glamour/golove.png" alt="Animo Logo">
+            <a class="navbar-brand js-global-link" href="index.php">
+                <img src="glamour/golove.png" alt="Glamour Logo">
             </a>
             <div class="d-flex align-items-center d-lg-none">
-                <a href="register.php" class="btn btn-gradient btn-sm me-2">Register</a>
+                <a href="register" class="btn btn-gradient btn-sm me-2">Register</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -769,18 +769,18 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home-section">Home</a>
+                        <a class="nav-link" href="index.php#hero-section">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about-section">About</a>
+                        <a class="nav-link" href="index.php#about-section">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features-section">Features</a>
+                        <a class="nav-link" href="index.php#features-section">Features</a>
                     </li>
                   
                 </ul>
             </div>
-            <a href="register.php" class="btn btn-gradient d-none d-lg-inline-block">Register</a>
+            <a href="register" class="btn btn-gradient d-none d-lg-inline-block">Register</a>
         </div>
     </nav>
     

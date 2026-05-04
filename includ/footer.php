@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-4 col-md-12 footer-info">
-                    <a href="#" class="footer-logo js-global-link">
+                    <a href="index.php" class="footer-logo js-global-link">
                         <img src="glamour/golove.png" alt=" Logo">
                     </a>
                     <p>At its core, Glamour is where the global market meets African expression — creating a new kind of digital economy driven by you.</p>
@@ -18,9 +18,9 @@
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#about-section">About us</a></li>
-                        <li><a href="#features-section">Features</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="index.php#about-section">About us</a></li>
+                        <li><a href="index.php#features-section">Features</a></li>
                     </ul>
                 </div>
 
