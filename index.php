@@ -11,7 +11,7 @@ include "includ/header.php";
             <div class="col-lg-7 hero-content">
 <h1 style="font-weight: 700;">
    Pictures Tell It All. And with <span style="color: #00e9fa;">GlamRealtime</span>,
-   you get paid for living in the moment</span>
+   you get paid for living in the moment
 </h1>
 
                 <p class="hero-pre-heading" data-aos="fade-right" data-aos-delay="100">
@@ -30,7 +30,7 @@ include "includ/header.php";
     <!-- Mobile Image Block -->
     <div class="hero-image-container-mobile d-lg-none d-flex justify-content-center" data-aos="fade-up">
         <a href="#" class="js-global-link">
-            <img src="/glamour/4ezk44xr.jpeg" 
+            <img src="glamour/4ezk44xr.jpeg" 
                  style="margin-bottom:30px; border-radius:25px; width:100%; max-width:400px;" 
                  alt="FortuneX App on Phone" 
                  class="hero-image-mobile">
@@ -40,7 +40,7 @@ include "includ/header.php";
     <!-- Desktop Image Block -->
     <div class="d-none d-lg-flex justify-content-center">
         <a href="#" class="js-global-link">
-            <img src="/glamour/4ezk44xr.jpeg" 
+            <img src="glamour/4ezk44xr.jpeg" 
                  style="margin-bottom:30px; border-radius:40px; width:100%; max-width:600px;" 
                  alt="FortuneX App on Phone" 
                  class="hero-image-desktop">
@@ -181,7 +181,7 @@ include "includ/header.php";
             </div>
             <div id="about-image-col" class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200">
                 <a href="#" class="js-global-link">
-                    <img src="/glamour/0q1vltqa.jpeg" alt="Glamour platform banner" class="img-fluid rounded-4 shadow-lg about-image">
+                    <img src="glamour/0q1vltqa.jpeg" alt="Glamour platform banner" class="img-fluid rounded-4 shadow-lg about-image">
                 </a>
             </div>
         </div>
@@ -190,12 +190,13 @@ include "includ/header.php";
 
 
  <!-- What is Animo Section -->
-    <section id="about-section">
+    <section id="about-section-container">
+    <section id="about-section-jobs" class="py-5">
         <div class="container">
             <div class="row align-items-center">
                   <div id="about-image-col" class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200">
                     <a href="#" class="js-global-link">
-                        <img src="/glamour/9dghj90z.jpeg" alt="Animo platform banner" class="img-fluid rounded-4 shadow-lg about-image">
+                        <img src="glamour/9dghj90z.jpeg" alt="Animo platform banner" class="img-fluid rounded-4 shadow-lg about-image">
                     </a>
                 </div>
                 <div id="about-text-col" class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-down">
@@ -228,28 +229,28 @@ On Glamour, We are here for everyone.... Even if you love the 9 to 5 pattern, we
             <!-- Feature 1 -->
             <div class="col-6 col-md-6 col-lg-3 text-center" data-aos="fade-up">
                 <div class="feature-img-wrapper">
-                    <img src="/glamour/qufhcy7v.jpeg" alt="Feature 1" class="img-fluid rounded-4 shadow-sm">
+                    <img src="glamour/qufhcy7v.jpeg" alt="Feature 1" class="img-fluid rounded-4 shadow-sm">
                 </div>
             </div>
 
             <!-- Feature 2 -->
             <div class="col-6 col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="100">
                 <div class="feature-img-wrapper">
-                    <img src="/glamour/olqyom0k.jpeg" alt="Feature 2" class="img-fluid rounded-4 shadow-sm">
+                    <img src="glamour/olqyom0k.jpeg" alt="Feature 2" class="img-fluid rounded-4 shadow-sm">
                 </div>
             </div>
 
             <!-- Feature 3 -->
             <div class="col-6 col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="200">
                 <div class="feature-img-wrapper">
-                    <img src="/glamour/djekjguc.jpeg" alt="Feature 3" class="img-fluid rounded-4 shadow-sm">
+                    <img src="glamour/djekjguc.jpeg" alt="Feature 3" class="img-fluid rounded-4 shadow-sm">
                 </div>
             </div>
 
             <!-- Feature 4 -->
             <div class="col-6 col-md-6 col-lg-3 text-center" data-aos="fade-up" data-aos-delay="300">
                 <div class="feature-img-wrapper">
-                    <img src="/glamour/3cce6i2b.jpeg" alt="Feature 4" class="img-fluid rounded-4 shadow-sm">
+                    <img src="glamour/3cce6i2b.jpeg" alt="Feature 4" class="img-fluid rounded-4 shadow-sm">
                 </div>
             </div>
         </div>
@@ -406,13 +407,13 @@ On Glamour, We are here for everyone.... Even if you love the 9 to 5 pattern, we
 </style>
 
 <!-- What is Animo Section -->
-<section id="about-section">
+<section id="lifestyle-section">
     <div class="container">
         <div class="row align-items-center">
 
             <div id="about-image-col" class="col-lg-6 text-center" data-aos="fade-up" data-aos-delay="200">
                 <a href="#" class="js-global-link">
-                    <img src="/glamour/3x55a9en.jpeg" alt="h" class="img-fluid rounded-4 shadow-lg about-image">
+                    <img src="glamour/3x55a9en.jpeg" alt="h" class="img-fluid rounded-4 shadow-lg about-image">
                 </a>
             </div>
 

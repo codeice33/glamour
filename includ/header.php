@@ -5,10 +5,10 @@
     <title>Glamour - What is Glamour</title>
 
     <!-- Favicon and SEO Tags -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/glamour/golove.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/glamour/golove.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/glamour/golove.png">
-    <link rel="shortcut icon" href="/glamour/golove.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="glamour/golove.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="glamour/golove.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="glamour/golove.png">
+    <link rel="shortcut icon" href="glamour/golove.png">
     <meta name="theme-color" content="#03082E">
 
     <!-- SEO Meta Tags -->
@@ -30,7 +30,7 @@
     <meta property="twitter:url" content="/">
     <meta property="twitter:title" content="Animo - What is Glamour">
     <meta property="twitter:description" content="Join Animo, the innovative ecosystem that rewards you for your daily steps. Explore our features, including affiliate marketing, skill acquisition, and digital real estate.">
-    <meta property="twitter:image" content="/glamour/golove.png">
+    <meta property="twitter:image" content="glamour/golove.png">
 
     <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -89,7 +89,7 @@
 
         /* --- Hero Section --- */
         #hero-section {
-            background-image: url('/glamour/gohovio.png');
+            background-image: url('glamour/gohovio.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -605,7 +605,7 @@
                 -webkit-backdrop-filter: blur(10px);
             }
             #hero-section {
-                background-image: url('/glamour/gohovio.png');
+                background-image: url('glamour/gohovio.png');
                 padding-top: 6rem;
                 padding-bottom: 0;
                 text-align: center;
@@ -758,7 +758,7 @@
     <nav class="navbar navbar-custom navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand js-global-link" href="/">
-                <img src="/glamour/golove.png" alt="Animo Logo">
+                <img src="glamour/golove.png" alt="Animo Logo">
             </a>
             <div class="d-flex align-items-center d-lg-none">
                 <a href="register.php" class="btn btn-gradient btn-sm me-2">Register</a>
@@ -769,7 +769,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
+                        <a class="nav-link" href="#home-section">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about-section">About</a>

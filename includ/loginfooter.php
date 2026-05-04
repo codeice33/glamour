@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     submitProofBtn.addEventListener('click', () => {
-        window.open('https://wa.me/+2349156344120?text=hello+I+just+made+my+payment', '_blank');
+        window.open('https://wa.me/+2348142470259?text=hello+I+just+made+my+payment', '_blank');
         overlay.style.display = 'none';
     });
 });

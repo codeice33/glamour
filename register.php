@@ -122,7 +122,7 @@ include "includ/header.php";
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-8">
                 <div class="register-card text-center">
-                    <img src="/glamour/golove.png" alt="Glamour Logo" class="logo">
+                    <img src="glamour/golove.png" alt="Glamour Logo" class="logo">
                     <h2>Create Your <span>Account</span></h2>
                     <p>Join Glamour and start your journey.</p>
 
@@ -183,7 +183,7 @@ include "includ/header.php";
             <div style="background:#1c1205; border-radius:10px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
                 <div>
                     <p style="margin:0; font-size:12px;">Account Number</p>
-                    <p id="accountNumber" style="margin-top:3px; font-weight:600;">8300452348</p>
+                    <p id="accountNumber" style="margin-top:3px; font-weight:600;">2007159075</p>
                 </div>
                 <button class="copyBtn" data-copy="accountNumber">Copy</button>
             </div>
@@ -191,7 +191,7 @@ include "includ/header.php";
             <div style="background:#1c1205; border-radius:10px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
                 <div>
                     <p style="margin:0; font-size:12px;">Account Name</p>
-                    <p id="accountName" style="margin-top:3px; font-weight:600;">Ogbonnaya KALU</p>
+                    <p id="accountName" style="margin-top:3px; font-weight:600;">Aliu Komolafe Adeniyi</p>
                 </div>
                 <button class="copyBtn" data-copy="accountName">Copy</button>
             </div>
@@ -199,7 +199,7 @@ include "includ/header.php";
             <div style="background:#1c1205; border-radius:10px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
                 <div>
                     <p style="margin:0; font-size:12px;">Bank</p>
-                    <p id="bankName" style="margin-top:3px; font-weight:600;">Fairmoney</p>
+                    <p id="bankName" style="margin-top:3px; font-weight:600;">Kuda</p>
                 </div>
                 <button class="copyBtn" data-copy="bankName">Copy</button>
             </div>
@@ -216,7 +216,7 @@ include "includ/header.php";
         <div style="margin-top:18px; background:#1c1205; border-radius:10px; padding:12px 15px;">
             <p style="margin:0; font-size:12px; color:#fff;">Payment Instruction</p>
             <p style="margin:5px 0 0; color:#7bff08; font-weight:bold; font-size:13px;">Complete Your Payment</p>
-            <p id="paymentTimer" style="margin-top:6px; color:#FFA500; font-size:13px;">05:00</p>
+            <p id="paymentTimer" style="margin-top:6px; color:#FFA500; font-size:13px;">10:00</p>
         </div>
 
         <a href="https://wa.me/2348128340739?text=Hello,+I+just+made+my+payment" class="btn btn-gradient w-100" style="margin-top:30px;">Submit Payment Proof</a>
@@ -241,12 +241,12 @@ function resetTimerUI() {
     const timer = document.getElementById("paymentTimer");
     timer.style.color = "#FFA500";
     timer.style.fontWeight = "normal";
-    timer.textContent = "05:00";
+    timer.textContent = "10:00";
 }
 
 function startPaymentTimer() {
     const display = document.getElementById("paymentTimer");
-    let timeLeft = 5 * 60;
+    let timeLeft = 10 * 60;
 
     const countdown = setInterval(() => {
         let min = Math.floor(timeLeft / 60);
@@ -308,8 +308,8 @@ document.addEventListener("click", e => {
         btn.style.color = "#fff";
         setTimeout(() => {
             btn.innerText = oldText;
-            btn.style.background = "#F2EB9B";
-            btn.style.color = "#260000";
+            btn.style.background = "#03ffaf";
+            btn.style.color = "#000";
         }, 1000);
     }
 });
