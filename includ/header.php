@@ -761,7 +761,7 @@
                 <img src="glamour/golove.png" alt="Glamour Logo">
             </a>
             <div class="d-flex align-items-center d-lg-none">
-                <a href="register" class="btn btn-gradient btn-sm me-2">Register</a>
+                <a href="register.php" class="btn btn-gradient btn-sm me-2">Register</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -780,7 +780,7 @@
                   
                 </ul>
             </div>
-            <a href="register" class="btn btn-gradient d-none d-lg-inline-block">Register</a>
+            <a href="register.php" class="btn btn-gradient d-none d-lg-inline-block">Register</a>
         </div>
     </nav>
     
