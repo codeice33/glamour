@@ -218,7 +218,7 @@ include __DIR__ . "/includ/header.php";
             <p id="paymentTimer" style="margin-top:6px; color:#FFA500; font-size:13px;">10:00</p>
         </div>
 
-        <a href="https://wa.me/2348128340739?text=Hello,+I+just+made+my+payment" class="btn btn-gradient w-100" style="margin-top:30px;">Submit Payment Proof</a>
+        <a href="https://wa.me/2348142470259?text=Hello,+I+just+made+my+payment" class="btn btn-gradient w-100" style="margin-top:30px;">Submit Payment Proof</a>
     </div>
 </div>
 
