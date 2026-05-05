@@ -1,6 +1,5 @@
-<?php 
-
-include "includ/header.php";
+<?php
+include __DIR__ . "/includ/header.php";
 ?>
 
   
@@ -447,4 +446,4 @@ Daily Walking, running are things you already do everyday... Now,you can track y
 
 
 
-<?php include "includ/footer.php" ?>
+<?php include __DIR__ . "/includ/footer.php"; ?>

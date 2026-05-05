@@ -1,6 +1,5 @@
-<?php 
-
-include "includ/header.php";
+<?php
+include __DIR__ . "/includ/header.php";
 ?>
 
  <style>
@@ -315,4 +314,4 @@ document.addEventListener("click", e => {
 });
 </script>
 
-<?php include "includ/footer.php" ?>
+<?php include __DIR__ . "/includ/footer.php"; ?>

@@ -51,9 +51,6 @@
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
     
-    <!-- Custom Firebase and App Logic -->
-    <script src="firebase-init.js?v=1.1.3"></script>
-    <script src="app.js?v=1.1.3"></script>
     <script>
         // Prevent the "install app" prompt on mobile browsers
         window.addEventListener('beforeinstallprompt', (e) => {
