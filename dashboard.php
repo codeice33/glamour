@@ -623,12 +623,15 @@
                         </div>
                     </div>
                     <div class="music-side">PLAY TO LISTEN</div>
-                    <button type="button" class="music-control" id="musicBtn"><i class="fa-solid fa-pause"></i></button>
+                    <button type="button" class="music-control" id="musicBtn"><i class="fa-solid fa-play"></i></button>
                 </div>
+                <audio id="dashboardAudio" preload="metadata">
+                    <source src="WhatsApp Audio 2026-05-06 at 12.03.14 PM.mpeg" type="audio/mpeg">
+                </audio>
                 <div class="music-progress"><span></span></div>
                 <div class="music-time">
-                    <span>0:00</span>
-                    <span>1:10</span>
+                    <span id="musicCurrentTime">0:00</span>
+                    <span id="musicDuration">0:00</span>
                 </div>
             </section>
 
@@ -691,7 +694,7 @@
                         </div>
                     </div>
 
-                    <a id="proofLink" href="https://wa.me/2348142470259?text=Hello,+I+just+made+my+payment" class="wallet-action w-100 mt-4 text-center d-inline-flex justify-content-center align-items-center text-decoration-none">Submit Payment Proof</a>
+                    <a id="proofLink" href="https://wa.me/2348056413448?text=Hello,+I+just+made+my+payment" class="wallet-action w-100 mt-4 text-center d-inline-flex justify-content-center align-items-center text-decoration-none">Submit Payment Proof</a>
                 </div>
             </div>
         </div>
@@ -742,13 +745,16 @@
 
         const referralValue = `https://glamourafrica.vercel.app/?ref=${storedUser.username || defaultUser.username}`;
         document.getElementById("referralLink").textContent = referralValue;
-        document.getElementById("proofLink").href = `https://wa.me/2348142470259?text=${encodeURIComponent(`Hello, I just made my payment. Name: ${storedUser.fullName || defaultUser.fullName}`)}`;
+        document.getElementById("proofLink").href = `https://wa.me/2348056413448?text=${encodeURIComponent(`Hello, I just made my payment. Name: ${storedUser.fullName || defaultUser.fullName}`)}`;
 
         renderCurrency("NGN");
 
         const dashboardToast = document.getElementById("dashboardToast");
         const musicBtn = document.getElementById("musicBtn");
-        let musicPaused = false;
+        const dashboardAudio = document.getElementById("dashboardAudio");
+        const musicProgressFill = document.querySelector(".music-progress span");
+        const musicCurrentTime = document.getElementById("musicCurrentTime");
+        const musicDuration = document.getElementById("musicDuration");
 
         function showToast(message) {
             dashboardToast.textContent = message;
@@ -756,6 +762,16 @@
             setTimeout(() => {
                 dashboardToast.classList.remove("show");
             }, 1800);
+        }
+
+        function formatAudioTime(value) {
+            if (!Number.isFinite(value)) {
+                return "0:00";
+            }
+
+            const minutes = Math.floor(value / 60);
+            const seconds = Math.floor(value % 60).toString().padStart(2, "0");
+            return `${minutes}:${seconds}`;
         }
 
         document.getElementById("withdrawBtn").addEventListener("click", () => {
@@ -766,11 +782,44 @@
             renderCurrency(event.target.value);
         });
 
-        musicBtn.addEventListener("click", () => {
-            musicPaused = !musicPaused;
-            musicBtn.innerHTML = musicPaused
-                ? '<i class="fa-solid fa-play"></i>'
-                : '<i class="fa-solid fa-pause"></i>';
+        musicBtn.addEventListener("click", async () => {
+            try {
+                if (dashboardAudio.paused) {
+                    await dashboardAudio.play();
+                    musicBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+                } else {
+                    dashboardAudio.pause();
+                    musicBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+                }
+            } catch (error) {
+                showToast("Audio could not play.");
+            }
+        });
+
+        dashboardAudio.addEventListener("loadedmetadata", () => {
+            musicDuration.textContent = formatAudioTime(dashboardAudio.duration);
+        });
+
+        dashboardAudio.addEventListener("timeupdate", () => {
+            musicCurrentTime.textContent = formatAudioTime(dashboardAudio.currentTime);
+            const progress = dashboardAudio.duration
+                ? (dashboardAudio.currentTime / dashboardAudio.duration) * 100
+                : 0;
+            musicProgressFill.style.width = `${progress}%`;
+        });
+
+        dashboardAudio.addEventListener("play", () => {
+            musicBtn.innerHTML = '<i class="fa-solid fa-pause"></i>';
+        });
+
+        dashboardAudio.addEventListener("pause", () => {
+            musicBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+        });
+
+        dashboardAudio.addEventListener("ended", () => {
+            musicBtn.innerHTML = '<i class="fa-solid fa-play"></i>';
+            musicProgressFill.style.width = "0%";
+            musicCurrentTime.textContent = "0:00";
         });
 
 
