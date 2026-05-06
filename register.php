@@ -2,131 +2,144 @@
 include __DIR__ . "/includ/header.php";
 ?>
 
- <style>
-/* ===== Registration Section ===== */
-.register-section {
+<style>
+.register-shell {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 60px 0;
-    background: #080805;
+    padding: 110px 0 80px;
+    background:
+        radial-gradient(circle at top left, rgba(0, 233, 250, 0.16), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(3, 255, 175, 0.18), transparent 28%),
+        linear-gradient(180deg, #060606 0%, #0a0d0b 100%);
 }
 
-/* Card */
 .register-card {
-    background: #000;
-    padding: 40px 35px;
-    border-radius: 15px;
+    background: linear-gradient(180deg, rgba(7, 7, 5, 0.95), rgba(13, 19, 16, 0.96));
+    border: 1px solid rgba(3, 255, 175, 0.18);
+    border-radius: 28px;
+    padding: 42px 36px;
+    box-shadow: 0 24px 90px rgba(0, 0, 0, 0.35);
 }
 
-
-/* Logo */
-.register-card .logo {
-    width: 85px;
-    margin-bottom: 15px;
+.register-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(3, 255, 175, 0.1);
+    border: 1px solid rgba(3, 255, 175, 0.2);
+    color: #9cffd8;
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    margin-bottom: 18px;
 }
 
-/* Heading */
+.register-logo {
+    width: 86px;
+    margin-bottom: 16px;
+}
+
 .register-card h2 {
-    font-size: 1.9rem;
+    font-size: 2rem;
     font-weight: 800;
     margin-bottom: 10px;
-    color: #00e9fa;
+    color: #fff;
 }
 
 .register-card h2 span {
     color: #00e9fa;
 }
 
-/* Sub text */
-.register-card p {
-    font-size: 0.95rem;
-    color: #dcdcdc;
-    margin-bottom: 25px;
+.register-copy {
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.7;
+    margin-bottom: 28px;
 }
 
-/* Labels (fixed color) */
 .register-card .form-label {
+    color: #f7f7f7;
     font-weight: 600;
-    color: #fff; /* Light cool tone for visibility */
+    margin-bottom: 8px;
 }
 
-/* Inputs */
-.register-card .form-control {
-    padding: 12px 14px;
-    border-radius: 10px;
-    background: #000000;
+.register-card .form-control,
+.register-card .form-select {
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.03);
     color: #fff;
-    transition: 0.25s ease;
+    padding: 13px 15px;
 }
 
 .register-card .form-control::placeholder {
-    color: #a5a5a5;
+    color: rgba(255, 255, 255, 0.42);
 }
 
-.register-card .form-control:focus {
-    border-color: #03ffaf;
-    box-shadow: 0 0 8px rgba(142, 255, 20, 0.35);
-    background: #000000;
+.register-card .form-control:focus,
+.register-card .form-select:focus {
+    background: rgba(255, 255, 255, 0.05);
     color: #fff;
+    border-color: rgba(3, 255, 175, 0.55);
+    box-shadow: 0 0 0 0.2rem rgba(3, 255, 175, 0.14);
 }
 
-
-/* Login link */
-.login-link {
-    margin-top: 20px;
-    font-size: 0.95rem;
-    color: #dcdcdc;
+.register-note {
+    margin-top: 22px;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(0, 233, 250, 0.08);
+    border: 1px solid rgba(0, 233, 250, 0.12);
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 0.92rem;
 }
 
-.login-link a {
-    color: #03ffaf;
-    font-weight: 600;
-    text-decoration: none;
+.register-note strong {
+    color: #00e9fa;
 }
 
-.login-link a:hover {
-    text-decoration: underline;
+.register-actions .btn {
+    width: 100%;
 }
 
-/* ===== Responsive ===== */
+.register-meta {
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 0.88rem;
+    text-align: center;
+}
+
 @media (max-width: 768px) {
+    .register-shell {
+        padding: 95px 0 55px;
+    }
+
     .register-card {
-        padding: 30px 25px;
+        padding: 30px 22px;
+        border-radius: 22px;
     }
 
     .register-card h2 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 }
+</style>
 
-.copyBtn {
-    background: #03ffaf;
-    color: #000;
-    border: none;
-    padding: 6px 14px;
-    font-size: 13px;
-    font-weight: 600;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.25s ease;
-    white-space: nowrap;
-}
- </style>
-  <!-- Main Content -->
-<main>
-   <!-- Registration Section -->
-<section class="register-section">
-    <div class="container">
+<main class="register-shell">
+    <section class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-5 col-md-8">
-                <div class="register-card text-center">
-                    <img src="glamour/golove.png" alt="Glamour Logo" class="logo">
-                    <h2>Create Your <span>Account</span></h2>
-                    <p>Join Glamour and start your journey.</p>
+            <div class="col-lg-6 col-md-8">
+                <div class="register-card">
+                    <div class="register-badge">
+                        <i class="fa-solid fa-sparkles"></i>
+                        Bonus unlocked after signup
+                    </div>
+                    <img src="glamour/golove.png" alt="Glamour Logo" class="register-logo">
+                    <h2>Create Your <span>Glamour Account</span></h2>
+                    <p class="register-copy">
+                        Finish your registration and we will take you straight into your account dashboard.
+                        Your EUR €7 welcome bonus will be added automatically <strong></strong>.
+                    </p>
 
-                    <!-- Registration Form -->
-                    <form class="text-start" id="registerForm">
+                    <form id="registerForm">
                         <div class="mb-3">
                             <label for="fullName" class="form-label">Full Name</label>
                             <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
@@ -142,12 +155,11 @@ include __DIR__ . "/includ/header.php";
                             <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
                         </div>
 
-                        <!-- Plan Selection -->
                         <div class="mb-3">
                             <label for="plan" class="form-label">Select Plan</label>
-                            <select id="plan" class="form-control" required>
+                            <select id="plan" class="form-select" required>
                                 <option value="" disabled selected>Choose your plan</option>
-                                <option value="plan_a" data-amount="14000">Glam Fee: ₦14,000 (€7)</option>
+                                <option value="Starter Activation" data-amount="14000">Glam Fee: NGN 14,000 (EUR 7)</option>
                             </select>
                         </div>
 
@@ -156,161 +168,44 @@ include __DIR__ . "/includ/header.php";
                             <input type="password" class="form-control" id="password" placeholder="Enter a strong password" required>
                         </div>
 
-                        <button type="submit" class="btn btn-gradient w-100">Create Account</button>
+                        <div class="register-actions mt-4">
+                            <button type="submit" class="btn btn-gradient">Create Account</button>
+                        </div>
                     </form>
 
-                    <div class="login-link">
-                        Already have an account? <a href="#">Log In</a>
+                    <div class="register-note">
+                        <strong>What happens next?</strong> After signup, the user lands on their dashboard with a <strong>EUR 7 welcome bonus</strong>.  <strong></strong>.
                     </div>
+
+                    <p class="register-meta">Already have an account?  <a href="">login</a></p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Payment Overlay Popup -->
-<div id="paymentOverlay" style="display:none; position:fixed; inset:0; backdrop-filter:blur(10px); background:rgba(0,0,0,0.55); z-index:9999; justify-content:center; align-items:center;">
-    <div id="paymentPopup" style="background:#080805; border-radius:16px; padding:25px; color:white; width:90%; max-width:480px; position:relative; transform:scale(0.93); opacity:0; transition:0.3s ease;">
-        <button id="closePayment" style="position:absolute; top:10px; right:14px; background:#03ffaf; color:#000; border:none; padding:5px 10px; border-radius:8px;">Close</button>
-
-        <h2 style="font-size:20px; font-weight:700;">Complete Registration</h2>
-        <p style="margin:10px 0 20px; color:#EBEBEB;">
-            Hi <span id="payerName" style="font-weight:800;">User</span>, pay to the account below.
-        </p>
-
-        <div style="display:flex; flex-direction:column; gap:12px;">
-            <div style="background:#1c1205; border-radius:10px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <p style="margin:0; font-size:12px;">Account Number</p>
-                    <p id="accountNumber" style="margin-top:3px; font-weight:600;">2007159075</p>
-                </div>
-                <button class="copyBtn" data-copy="accountNumber">Copy</button>
-            </div>
-
-            <div style="background:#1c1205; border-radius:10px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <p style="margin:0; font-size:12px;">Account Name</p>
-                    <p id="accountName" style="margin-top:3px; font-weight:600;">Aliu Komolafe Adeniyi</p>
-                </div>
-                <button class="copyBtn" data-copy="accountName">Copy</button>
-            </div>
-
-            <div style="background:#1c1205; border-radius:10px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <p style="margin:0; font-size:12px;">Bank</p>
-                    <p id="bankName" style="margin-top:3px; font-weight:600;">Kuda</p>
-                </div>
-                <button class="copyBtn" data-copy="bankName">Copy</button>
-            </div>
-
-            <div style="background:#1c1205; border-radius:10px; padding:14px; display:flex; justify-content:space-between; align-items:center;">
-                <div>
-                    <p style="margin:0; font-size:12px;">Amount to Pay</p>
-                    <p id="paymentAmount" style="margin-top:3px; font-weight:600;">₦0</p>
-                </div>
-                <button class="copyBtn" data-copy="paymentAmount">Copy</button>
-            </div>
-        </div>
-
-        <div style="margin-top:18px; background:#1c1205; border-radius:10px; padding:12px 15px;">
-            <p style="margin:0; font-size:12px; color:#fff;">Payment Instruction</p>
-            <p style="margin:5px 0 0; color:#7bff08; font-weight:bold; font-size:13px;">Complete Your Payment</p>
-            <p id="paymentTimer" style="margin-top:6px; color:#FFA500; font-size:13px;">10:00</p>
-        </div>
-
-        <a href="https://wa.me/2348142470259?text=Hello,+I+just+made+my+payment" class="btn btn-gradient w-100" style="margin-top:30px;">Submit Payment Proof</a>
-    </div>
-</div>
+    </section>
+</main>
 
 <script>
-const form = document.getElementById("registerForm");
-const popupOverlay = document.getElementById("paymentOverlay");
-const popupBox = document.getElementById("paymentPopup");
-const closePopup = document.getElementById("closePayment");
+const registerForm = document.getElementById("registerForm");
 
-const fullNameInput = document.getElementById("fullName");
-const planSelect = document.getElementById("plan");
+registerForm.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-const payerName = document.getElementById("payerName");
-const paymentAmount = document.getElementById("paymentAmount");
+    const plan = document.getElementById("plan");
+    const selectedOption = plan.options[plan.selectedIndex];
 
-let activeTimer = null;
+    const registrationData = {
+        fullName: document.getElementById("fullName").value.trim(),
+        username: document.getElementById("username").value.trim(),
+        email: document.getElementById("email").value.trim(),
+        planName: selectedOption.value,
+        activationAmount: selectedOption.dataset.amount || "14000",
+        welcomeBonus: 12,
+        activated: false,
+        joinedAt: new Date().toISOString()
+    };
 
-function resetTimerUI() {
-    const timer = document.getElementById("paymentTimer");
-    timer.style.color = "#FFA500";
-    timer.style.fontWeight = "normal";
-    timer.textContent = "10:00";
-}
-
-function startPaymentTimer() {
-    const display = document.getElementById("paymentTimer");
-    let timeLeft = 10 * 60;
-
-    const countdown = setInterval(() => {
-        let min = Math.floor(timeLeft / 60);
-        let sec = (timeLeft % 60);
-        display.textContent = `${min.toString().padStart(2,'0')}:${sec.toString().padStart(2,'0')}`;
-        timeLeft--;
-        if (timeLeft < 0) {
-            clearInterval(countdown);
-            display.textContent = "Payment window expired";
-            display.style.color = "#FF3B3B";
-            display.style.fontWeight = "700";
-        }
-    }, 1000);
-
-    return countdown;
-}
-
-// Show popup on form submit
-form.addEventListener("submit", e => {
-    e.preventDefault();
-
-    // Populate payer name
-    payerName.textContent = fullNameInput.value || "User";
-
-    // Populate payment amount based on selected plan
-    const selectedOption = planSelect.options[planSelect.selectedIndex];
-    const amount = selectedOption.dataset.amount || "0";
-    paymentAmount.textContent = `₦${amount}`;
-
-    // Show popup
-    popupOverlay.style.display = "flex";
-    setTimeout(() => {
-        popupBox.style.transform = "scale(1)";
-        popupBox.style.opacity = "1";
-    }, 30);
-
-    if (activeTimer) clearInterval(activeTimer);
-    resetTimerUI();
-    activeTimer = startPaymentTimer();
-});
-
-// Close popup
-closePopup.addEventListener("click", () => {
-    popupBox.style.transform = "scale(0.93)";
-    popupBox.style.opacity = "0";
-    setTimeout(() => popupOverlay.style.display = "none", 200);
-});
-
-// COPY BUTTON HANDLING
-document.addEventListener("click", e => {
-    if (e.target.classList.contains("copyBtn")) {
-        const targetId = e.target.getAttribute("data-copy");
-        const text = document.getElementById(targetId).innerText.trim();
-        navigator.clipboard.writeText(text);
-        const btn = e.target;
-        const oldText = btn.innerText;
-        btn.innerText = "Copied!";
-        btn.style.background = "#3EC70B";
-        btn.style.color = "#fff";
-        setTimeout(() => {
-            btn.innerText = oldText;
-            btn.style.background = "#03ffaf";
-            btn.style.color = "#000";
-        }, 1000);
-    }
+    localStorage.setItem("glamourUser", JSON.stringify(registrationData));
+    window.location.href = "dashboard.php";
 });
 </script>
 
