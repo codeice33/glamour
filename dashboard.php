@@ -626,7 +626,7 @@
                     <button type="button" class="music-control" id="musicBtn"><i class="fa-solid fa-play"></i></button>
                 </div>
                 <audio id="dashboardAudio" preload="metadata">
-                    <source src="WhatsApp Audio 2026-05-06 at 12.03.14 PM.mpeg" type="audio/mpeg">
+                    <source src="/assets/welcome-audio.mpeg" type="audio/mpeg">
                 </audio>
                 <div class="music-progress"><span></span></div>
                 <div class="music-time">
