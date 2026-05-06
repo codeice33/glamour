@@ -199,7 +199,7 @@ registerForm.addEventListener("submit", (event) => {
         email: document.getElementById("email").value.trim(),
         planName: selectedOption.value,
         activationAmount: selectedOption.dataset.amount || "14000",
-        welcomeBonus: 12,
+        welcomeBonus: 7,
         activated: false,
         joinedAt: new Date().toISOString()
     };

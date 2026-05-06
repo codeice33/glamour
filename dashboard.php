@@ -568,7 +568,7 @@
                     <div class="dashboard-logo-text">Glamour</div>
                 </div>
                 <div class="dashboard-tools">
-                    <label class="dashboard-pill" for="currencySelect"><i class="fa-solid fa-globe"></i><select id="currencySelect" aria-label="Select currency"><option value="NGN">&#12; NGN</option><option value="EUR">&euro; EUR</option></select></label>
+                    <label class="dashboard-pill" for="currencySelect"><i class="fa-solid fa-globe"></i><select id="currencySelect" aria-label="Select currency"><option value="NGN">&#8358; NGN</option><option value="EUR">&euro; EUR</option></select></label>
                     <div class="dashboard-menu-wrap" id="dashboardMenuWrap">
                         <button type="button" class="dashboard-menu" id="dashboardMenuButton" aria-label="Open activation menu"><i class="fa-solid fa-bars"></i></button>
                         <div class="dashboard-menu-panel" id="dashboardMenuPanel">
@@ -863,6 +863,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
 
 
 
