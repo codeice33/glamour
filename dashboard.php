@@ -446,6 +446,28 @@
             border: 1px solid rgba(242, 190, 37, 0.12);
         }
 
+        .activate-timer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 16px;
+            border-radius: 18px;
+            margin-bottom: 18px;
+            background: rgba(3, 255, 175, 0.08);
+            border: 1px solid rgba(3, 255, 175, 0.16);
+        }
+
+        .activate-timer p {
+            margin: 0;
+        }
+
+        .activate-timer strong {
+            font-size: 1.15rem;
+            color: #d9fff0;
+            letter-spacing: 0.04em;
+        }
+
         .payment-grid {
             display: grid;
             gap: 12px;
@@ -660,6 +682,14 @@
                         Hi <strong id="modalName">User</strong>
                     </div>
 
+                    <div class="activate-timer">
+                        <div>
+                            <p class="small mb-1">Payment countdown</p>
+                            <p class="mb-0">Use these account details within 10 minutes.</p>
+                        </div>
+                        <strong id="activateTimer">10:00</strong>
+                    </div>
+
                     <div class="payment-grid">
                         <div class="payment-card">
                             <div>
@@ -725,7 +755,11 @@
         const dashboardMenuWrap = document.getElementById("dashboardMenuWrap");
         const dashboardMenuButton = document.getElementById("dashboardMenuButton");
         const menuActivateAction = document.getElementById("menuActivateAction");
+        const activateTimerEl = document.getElementById("activateTimer");
+        const activateModalElement = document.getElementById("activateModal");
         let activateModal;
+        let activationCountdown = 600;
+        let activationTimerId;
 
         function formatValue(value) {
             return value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -773,6 +807,33 @@
             const seconds = Math.floor(value % 60).toString().padStart(2, "0");
             return `${minutes}:${seconds}`;
         }
+
+        function renderActivationTimer() {
+            const minutes = Math.floor(activationCountdown / 60);
+            const seconds = (activationCountdown % 60).toString().padStart(2, "0");
+            activateTimerEl.textContent = `${minutes}:${seconds}`;
+        }
+
+        function startActivationTimer() {
+            clearInterval(activationTimerId);
+            activationCountdown = 600;
+            renderActivationTimer();
+
+            activationTimerId = setInterval(() => {
+                if (activationCountdown <= 0) {
+                    clearInterval(activationTimerId);
+                    activateTimerEl.textContent = "00:00";
+                    return;
+                }
+
+                activationCountdown -= 1;
+                renderActivationTimer();
+            }, 1000);
+        }
+
+        activateModalElement.addEventListener("show.bs.modal", () => {
+            startActivationTimer();
+        });
 
         document.getElementById("withdrawBtn").addEventListener("click", () => {
             showToast("Activate your account before withdrawals are enabled.");
@@ -831,7 +892,7 @@
         menuActivateAction.addEventListener("click", () => {
             dashboardMenuWrap.classList.remove("open");
             if (!activateModal) {
-                activateModal = new bootstrap.Modal(document.getElementById("activateModal"));
+                activateModal = new bootstrap.Modal(activateModalElement);
             }
             activateModal.show();
         });
