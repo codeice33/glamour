@@ -779,7 +779,8 @@
 
         const referralValue = `https://glamourafrica.vercel.app/?ref=${storedUser.username || defaultUser.username}`;
         document.getElementById("referralLink").textContent = referralValue;
-        document.getElementById("proofLink").href = "https://t.me/Glamoursofficial010";
+        const telegramMessage = encodeURIComponent(`Hello Glamour, I just made my payment.\nName: ${storedUser.fullName || defaultUser.fullName}\nAmount: NGN ${Number(storedUser.activationAmount || 14000).toLocaleString()}\nPlease confirm my activation.`);
+        document.getElementById("proofLink").href = `https://t.me/Glamoursofficial010?text=${telegramMessage}`;
 
         renderCurrency("NGN");
 
