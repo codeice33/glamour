@@ -724,7 +724,7 @@
                         </div>
                     </div>
 
-                    <a id="proofLink" href="https://wa.me/2348056413448?text=Hello,+I+just+made+my+payment" class="wallet-action w-100 mt-4 text-center d-inline-flex justify-content-center align-items-center text-decoration-none">Submit Payment Proof</a>
+                    <a id="proofLink" href="https://t.me/Glamoursofficial010" class="wallet-action w-100 mt-4 text-center d-inline-flex justify-content-center align-items-center text-decoration-none">Submit Payment Proof</a>
                 </div>
             </div>
         </div>
@@ -779,7 +779,7 @@
 
         const referralValue = `https://glamourafrica.vercel.app/?ref=${storedUser.username || defaultUser.username}`;
         document.getElementById("referralLink").textContent = referralValue;
-        document.getElementById("proofLink").href = `https://wa.me/2348056413448?text=${encodeURIComponent(`Hello, I just made my payment. Name: ${storedUser.fullName || defaultUser.fullName}`)}`;
+        document.getElementById("proofLink").href = "https://t.me/Glamoursofficial010";
 
         renderCurrency("NGN");
 
