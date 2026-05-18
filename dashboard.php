@@ -694,7 +694,7 @@
                         <div class="payment-card">
                             <div>
                                 <p class="small">Account Number</p>
-                                <strong id="accountNumber">2007159075</strong>
+                                <strong id="accountNumber">2397865749</strong>
                             </div>
                             <button type="button" class="copyBtn" data-copy-target="accountNumber">Copy</button>
                         </div>
@@ -710,7 +710,7 @@
                         <div class="payment-card">
                             <div>
                                 <p class="small">Bank</p>
-                                <strong id="bankName">Kuda</strong>
+                                <strong id="bankName">Zenith Bank</strong>
                             </div>
                             <button type="button" class="copyBtn" data-copy-target="bankName">Copy</button>
                         </div>
